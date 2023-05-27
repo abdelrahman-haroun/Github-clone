@@ -121,8 +121,12 @@ main {
   gap: 15px;
 }
 .Name {
+  color: gray;
   width: 70%;
   text-align: left;
+}
+.fa-users{
+  color:gray;
 }
 .follow {
   width: 70%;
