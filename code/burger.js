@@ -54,7 +54,7 @@ log.addEventListener("click", () => {
         } else {
           location.href = "index.html";
         }
-  location.href = "../index.html";
+ 
 });
 //  this is for in click in comparision go to comparision page
 let lastChild = document.querySelector(".o:last-child");
