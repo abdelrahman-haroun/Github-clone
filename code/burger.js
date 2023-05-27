@@ -52,7 +52,10 @@ log.addEventListener("click", () => {
       if (location.pathname === "/Github-clone/code/comparision.html") {
           location.href = "../index.html";
         }
- 
+  else {
+    location.href="#"
+  }
+
 });
 //  this is for in click in comparision go to comparision page
 let lastChild = document.querySelector(".o:last-child");
