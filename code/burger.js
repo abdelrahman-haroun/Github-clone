@@ -24,7 +24,7 @@ function burgerMenu(i) {
         });
       });
       lastChild.addEventListener("click", () => {
-        if (location.pathname === "/code/comparision.html") {
+        if (location.pathname === "/Github-clone/code/comparision.html") {
           location.href = "comparision.html";
         } else {
           location.href = "./code/comparision.html";
@@ -55,7 +55,7 @@ log.addEventListener("click", () => {
 let lastChild = document.querySelector(".o:last-child");
 lastChild.style.cursor = "pointer";
 lastChild.addEventListener("click", () => {
-  if (location.pathname === "/code/comparision.html") {
+  if (location.pathname === "/Github-clone/code/comparision.html") {
     location.href = "comparision.html";
   } else {
     location.href = "./code/comparision.html";
