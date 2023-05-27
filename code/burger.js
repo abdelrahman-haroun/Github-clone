@@ -49,6 +49,11 @@ function burgerMenu(i) {
 let log = document.getElementsByClassName("log-img")[0];
 log.style.cursor = "pointer";
 log.addEventListener("click", () => {
+      if (location.pathname === "/Github-clone/code/comparision.html") {
+          location.href = "../index.html";
+        } else {
+          location.href = "index.html";
+        }
   location.href = "../index.html";
 });
 //  this is for in click in comparision go to comparision page
