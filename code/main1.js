@@ -35,7 +35,7 @@ callGitHub("abdelrahman-haroun").then((user) => {
   document.getElementsByTagName("img")[1].setAttribute("src", user.avatar_url);
   document.getElementsByClassName(
     "follower"
-  )[0].textContent = `${user.followers} followers`;
+  )[0].textContent = `${user.followers} `;
   document.getElementsByClassName(
     "following"
   )[0].textContent = `${user.following} following`;
@@ -52,7 +52,7 @@ callGitHub("ayhamzaid").then((user) => {
   document.getElementsByTagName("img")[2].setAttribute("src", user.avatar_url);
   document.getElementsByClassName(
     "follower"
-  )[1].textContent = `${user.followers} followers`;
+  )[1].textContent = `${user.followers} `;
   document.getElementsByClassName(
     "following"
   )[1].textContent = `${user.following} following`;
@@ -77,7 +77,7 @@ btn1.addEventListener("click", () => {
         .setAttribute("src", user.avatar_url);
       document.getElementsByClassName(
         "follower"
-      )[0].textContent = `${user.followers} followers`;
+      )[0].textContent = `${user.followers} `;
       document.getElementsByClassName(
         "following"
       )[0].textContent = `${user.following} following`;
@@ -92,6 +92,7 @@ btn1.addEventListener("click", () => {
   document.getElementsByClassName("aaa")[0].innerHTML = "";
   document.getElementsByClassName("aaa")[1].innerHTML = "";
 });
+
 // this for second search user
 btn2.style.cursor = "pointer";
 btn2.addEventListener("click", () => {
@@ -106,7 +107,7 @@ btn2.addEventListener("click", () => {
         .setAttribute("src", user.avatar_url);
       document.getElementsByClassName(
         "follower"
-      )[1].textContent = `${user.followers} followers`;
+      )[1].textContent = `${user.followers} `;
       document.getElementsByClassName(
         "following"
       )[1].textContent = `${user.following} following`;
@@ -134,13 +135,25 @@ btn3.addEventListener("click", () => {
     document.getElementsByClassName("aaa")[0].append(div0);
     document.getElementsByClassName("aaa")[1].append(div1);
   } else if (
-    parseInt(document.getElementsByClassName("winner1")[0].textContent) ==
+    parseInt(document.getElementsByClassName("winner1")[0].textContent) <
     parseInt(document.getElementsByClassName("winner1")[1].textContent)
   ) {
-    document.getElementsByClassName("aaa")[0].append(div2);
-    document.getElementsByClassName("aaa")[1].append(div3);
-  } else {
     document.getElementsByClassName("aaa")[1].append(div0);
     document.getElementsByClassName("aaa")[0].append(div1);
+  } else if (
+    parseInt(document.getElementsByClassName("follower")[0].textContent) >
+    parseInt(document.getElementsByClassName("follower")[1].textContent)
+  ) {
+    document.getElementsByClassName("aaa")[0].append(div0);
+    document.getElementsByClassName("aaa")[1].append(div1);
+  } else if (
+    parseInt(document.getElementsByClassName("follower")[0].textContent) <
+    parseInt(document.getElementsByClassName("follower")[1].textContent)
+  ) {
+    document.getElementsByClassName("aaa")[1].append(div0);
+    document.getElementsByClassName("aaa")[0].append(div1);
+  } else {
+    document.getElementsByClassName("aaa")[0].append(div2);
+    document.getElementsByClassName("aaa")[1].append(div3);
   }
 });
