@@ -47,6 +47,20 @@ nav {
   display: flex;
   gap: 15px;
 }
+.search-sec {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+.search-sec #input {
+  border: solid 2px black;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+.search-sec #btn {
+  display: none;
+}
 
 .search-bar {
   padding: 5px;
