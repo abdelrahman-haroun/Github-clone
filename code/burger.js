@@ -51,8 +51,6 @@ log.style.cursor = "pointer";
 log.addEventListener("click", () => {
       if (location.pathname === "/Github-clone/code/comparision.html") {
           location.href = "../index.html";
-        } else {
-          location.href = "/index.html";
         }
  
 });
